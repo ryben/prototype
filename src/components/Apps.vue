@@ -1,11 +1,9 @@
 <template>
   <div>
-    Apps Page
-    <br />
     <div v-for="app in apps" :key="app.url">
       <p>
         <a
-          :href="clickUrl(app)"
+          :href="urlOnClick(app)"
           style="text-decoration: none; color: blue"
           target="_blank"
         >{{ app.title }}</a>
@@ -23,13 +21,13 @@ export default {
       apps: [
         {
           title: "HTML5 Exercise",
-          description: "",
+          description: "HTML & CSS: Animations and transitions sample",
           url: "https://ryben.github.io/html5exer"
         },
         {
           title: "WebGL Sample",
           description:
-            "A three-planet solar system model using ThreeJS library.",
+            "Three-planet solar system modeled using ThreeJS library.",
           url: "https://ryben.github.io/"
         },
         {
@@ -48,7 +46,7 @@ export default {
     };
   },
   methods: {
-    clickUrl(app) {
+    urlOnClick(app) {
       return app.onClickUrl != undefined ? app.onClickUrl : app.url;
     }
   }

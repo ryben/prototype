@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     time: function() {
-      return this.formatDateTime(this.dateTime, "hh:mm TT");
+      return this.formatDateTime(this.dateTime, "hh:MM TT");
     },
     dayOfWeek: function() {
       return this.formatDateTime(this.dateTime, "ddd");
